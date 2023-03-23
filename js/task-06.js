@@ -4,13 +4,14 @@ inputBlurEl.addEventListener('blur', onInputBlur);
 
 
 function onInputBlur() {
+  const inputLengthEl = inputBlurEl.getAttribute('data-length');
+    if (Number(inputLengthEl) <= inputBlurEl.value.length) {
     
-    if (inputBlurEl.getAttribute('data-length') <= inputBlurEl.value.length) {
-        //console.log(inputBlurEl.value.length);
-        inputBlurEl.classList.add('valid');
-       // console.log(inputBlurEl.getAttribute('.data-length'));
+      inputBlurEl.classList.add('valid');
+      inputBlurEl.classList.remove('invalid');
+      
     } else {
         inputBlurEl.classList.add('invalid');
-      //  console.log(`Input потерял фокус -событие блюр`);
+     
     };
 };
