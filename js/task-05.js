@@ -3,5 +3,10 @@ const output = document.querySelector('#name-output');
 textInput.addEventListener('input', onInputText);
     
 function onInputText() {
-   output.textContent = textInput.value;
+   if (textInput.value !== '') {
+      output.textContent = textInput.value; 
+   } else {
+      output.textContent = 'Anonymous';
+   }
+   
 };
