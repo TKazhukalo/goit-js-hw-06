@@ -6,9 +6,10 @@ function onSumbit(event) {
     const {
         elements: { email, password }
     } = event.currentTarget;
-    if (email.value !== "@" && password.value === "") {
-        return alert(` Всі поля повинні бути заповнені!`);
+    if (email.value === "" || password.value === "") {
+     return alert(` Всі поля повинні бути заповнені!`);
     } else {
-        console.log(`email: ${email.value}\n password: ${password.value}`);
+        console.log(`Email: ${email.value}\n Password: ${password.value}`);
+        event.currentTarget.reset();
     };
 };
