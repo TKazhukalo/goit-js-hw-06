@@ -11,6 +11,6 @@ btnChangeEl.addEventListener('click', onClick);
 function onClick() {
   bodyEl.style.background = getRandomHexColor();
  // console.log(getRandomHexColor());
- colorEl.textContent = `${getRandomHexColor()}`;
+ colorEl.textContent = `${bodyEl.style.background}`;
  // console.log(event.currentTarget);
 }
